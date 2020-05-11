@@ -27,19 +27,11 @@ def escape_html(word):
     return escape(word)
 
 PM_START_TEXT = """
-Hello *{}* My name is *Sabrina*!
+Hello *{}* My name is *Miss* Sexy*! A Modular Python Group Maange Bot. 
 
-I'm here to manage your groups! 
+Made With Love And Maintained By [This Noob](https://t.me/Unknown_Hacker_X) . 
 
-Click Help button to find out more about how to use me to my full potential. 
-
-Join Support Chat ( @SabrinaChat ) if you need any support or help 
-
-Join ( @SabrinaOfficial ) if you want to keep up with the news, updates and bot downtime!
-
-Made by @TechnoAyanOfficial
-
-Want me to help you? [Click Here!](https://t.me/MissSabrina_bot?startgroup=true)
+Want To Add Me To Your Groups? [Click Here!](https://t.me/Miss_SexY_rOboT?startgroup=true)
 """
 
 
@@ -49,7 +41,7 @@ HELP_STRINGS = """
 
 Hello! my name *{}*.
 
-*Main* available commands:
+*Main* *Available* *Commands* :
  - /start: Start the bot...
  - /help: help....
  - /donate: To find out more about donating!
@@ -61,7 +53,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-DONATE_STRING = """Hey you can Donate to [Ayan Ansari](t.me/TechnoAyanOfficial) for better server """
+DONATE_STRING = """Sorry Sir Or Madam. I/My Creator Don't Gonna Accept Donations 🤗 . """
 
 
 IMPORTED = {}
@@ -153,7 +145,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Yo, I'm alive👩")
+        update.effective_message.reply_text("Yup. I'm Alive. PM Me If You Have Any Queries On How To Use Me.""") 
+   # 
 
 def send_start(bot, update):
     #Try to remove old message
@@ -167,12 +160,12 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID, parse_mode=ParseMode.MARKDOWN)
                 
-    keyboard = [[
-        InlineKeyboardButton(text=tld(chat.id, '🥳Add To Group'),
-                             url="https://t.me/MissSabrina_bot?startgroup=true"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
+       # keyboard = [[
+       # InlineKeyboardButton(text=tld(chat.id, '🥳Add To Group'),
+       #                   url="https://t.me/Miss_SexY_rOboT?startgroup=true"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
         ]]
-    keyboard += [[
-        InlineKeyboardButton(text=tld(chat.id, '👥 Support Group'), url="https://t.me/SabrinaChat")
+       # keyboard += [[
+       # InlineKeyboardButton(text=tld(chat.id, '👥 Support Group'), url="https://t.me/Sabrina_RoBotChat")
     ]]
 
     update.effective_message.reply_text(
